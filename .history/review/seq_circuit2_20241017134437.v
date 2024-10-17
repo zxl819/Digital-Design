@@ -21,12 +21,6 @@ end
 always @(*) begin
     case(curr_state)
     2'b00:next_state = (C == 1'b1) ? 2'b01:2'b00;
-    2'b01:next_state = (C == 1'b1) ? 2'b01:2'b11;
-    2'b10:next_state = (C == 1'b1) ? 2'b10:2'b00;
-    2'b11:next_state = (C == 1'b1) ? 2'b10:2'b11;
-    default: next_state <= 2'b00;
     endcase
 end
-
-assign Y = ((curr_state == 2'b11)|((curr_state == 2'b10)&&(C == 1'b1)))? 1'b1:1'b0;
 endmodule

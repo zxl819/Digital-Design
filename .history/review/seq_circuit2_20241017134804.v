@@ -28,5 +28,5 @@ always @(*) begin
     endcase
 end
 
-assign Y = ((curr_state == 2'b11)|((curr_state == 2'b10)&&(C == 1'b1)))? 1'b1:1'b0;
+assign Y = ((curr_state == 2'b11)|(curr_state == 2'b10)&&(C == 1'b1))? 1'b1:1'b0;
 endmodule
