@@ -21,7 +21,7 @@ module instdecoder_tb();
     wire [19:0] imm_1231;
     wire [11:0] imm_2032;
 
-    instruction_decoder dut(
+    instruction_decode dut(
         .instruction_code(instruction_code),
         .en(en),
         .invalid_instruction(invalid_instruction),
@@ -42,7 +42,7 @@ module instdecoder_tb();
 
 `ifdef FSDB
 initial begin
-    $fsdbDumpfile("tb_counter.fsdb");
+    $fsdbDumpfile("tb_instru.fsdb");
     $fsdbDumpvars;
 end
 `endif

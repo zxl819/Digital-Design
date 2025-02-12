@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 `define ClEAR_ALL_OUTPINTS \
     alu_op = 19'b0; \
     jmp_op = 9'b0; \
@@ -8,7 +9,7 @@
     invalid_instruction = 32'bz; \
 
 module instruction_decoder(
-    input en;
+    input en,
     input [31:0] instruction_code,
     output [31:0] invalid_instruction,
     output reg [18:0] alu_op,
@@ -20,7 +21,7 @@ module instruction_decoder(
     output wire [4:0] rd, rs1, rs2,
     output wire [6:0] imm_2531,//R-type
     output wire [19:0] imm_1231,//U-type
-    output wire [11:0] imm_2032,//I-type
+    output wire [11:0] imm_2032//I-type
 );
 
 wire [6:2] opcode;
