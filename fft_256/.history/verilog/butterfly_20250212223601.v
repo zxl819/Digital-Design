@@ -62,10 +62,6 @@ always @(posedge clk or negedge rst_n) begin
         xp_im_d <= {{4{xp_im[15]}}, xp_im[14:0],13'b0};
     end
 end
-    //----------------------------------------------------------------------------
-    // 3) 第 2 拍：蝶形核心加/减(合并乘积)
-    //----------------------------------------------------------------------------
-
 
 reg signed [31:0] xq_wnr_re;
 reg signed [31:0] xq_wnr_im;
@@ -82,38 +78,11 @@ always @(posedge clk or negedge rst_n) begin
     else if(en_r[0]) begin
         xp_re_d1 <= xp_re_d;
         xp_im_d1 <= xp_im_d;
-        xq_wnr_re <= xq_wnr_re0 - xq_wnr_re1;// xq * Wn 的实部
-        xq_wnr_im <= xq_wnr_im0 + xq_wnr_im1;// xq * Wn 的虚部
+        xq_wnr_re <= xq_wnr_re0 - xq_wnr_re1;
+        xq_wnr_im <= xq_wnr_im0 + xq_wnr_im1;
     end
 end
 
-    //----------------------------------------------------------------------------
-    // 4) 第 3 拍：最终蝶形加减(与 xp 相加/相减)
-    //----------------------------------------------------------------------------
 
-reg signed [31:0] yp_re_r;
-reg signed [31:0] yp_im_r;
-reg signed [31:0] yq_re_r;
-reg signed [31:0] yq_im_r;
-
-always @(posedge clk or negedge rst_n) begin
-    if (rst_n == 1'b0) begin
-        yp_re_r <= 0;
-        yp_im_r <= 0;
-        yq_re_r <= 0;
-        yq_im_r <= 0;
-    end
-    else if(en_r[1]) begin
-        yp_re_r <= xp_re_d1 + xq_wnr_re;
-        yp_im_r <= xp_im_d1 + xq_wnr_im;
-        yq_re_r <= xp_re_d1 - xq_wnr_re;
-        yq_im_r <= xp_im_d1 - xq_wnr_im;
-    end
-end
-
-    assign yp_re = {yp_re_r[31],yp_re_r[13+15:13]};
-    assign yp_im = {yp_im_r[31],yp_im_r[13+15:13]};
-    assign yq_re = {yq_re_r[31],yq_re_r[13+15:13]};
-    assign yq_im = {yq_im_r[31],yq_im_r[13+15:13]};
 
 endmodule

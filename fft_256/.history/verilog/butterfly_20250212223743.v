@@ -96,24 +96,5 @@ reg signed [31:0] yp_im_r;
 reg signed [31:0] yq_re_r;
 reg signed [31:0] yq_im_r;
 
-always @(posedge clk or negedge rst_n) begin
-    if (rst_n == 1'b0) begin
-        yp_re_r <= 0;
-        yp_im_r <= 0;
-        yq_re_r <= 0;
-        yq_im_r <= 0;
-    end
-    else if(en_r[1]) begin
-        yp_re_r <= xp_re_d1 + xq_wnr_re;
-        yp_im_r <= xp_im_d1 + xq_wnr_im;
-        yq_re_r <= xp_re_d1 - xq_wnr_re;
-        yq_im_r <= xp_im_d1 - xq_wnr_im;
-    end
-end
-
-    assign yp_re = {yp_re_r[31],yp_re_r[13+15:13]};
-    assign yp_im = {yp_im_r[31],yp_im_r[13+15:13]};
-    assign yq_re = {yq_re_r[31],yq_re_r[13+15:13]};
-    assign yq_im = {yq_im_r[31],yq_im_r[13+15:13]};
 
 endmodule

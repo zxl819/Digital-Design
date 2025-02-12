@@ -111,9 +111,5 @@ always @(posedge clk or negedge rst_n) begin
     end
 end
 
-    assign yp_re = {yp_re_r[31],yp_re_r[13+15:13]};
-    assign yp_im = {yp_im_r[31],yp_im_r[13+15:13]};
-    assign yq_re = {yq_re_r[31],yq_re_r[13+15:13]};
-    assign yq_im = {yq_im_r[31],yq_im_r[13+15:13]};
 
 endmodule

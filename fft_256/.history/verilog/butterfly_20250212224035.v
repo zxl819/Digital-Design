@@ -58,8 +58,8 @@ always @(posedge clk or negedge rst_n) begin
         xq_wnr_im1 <= xq_im * factor_re;
 
         //xp 左移15位
-        xp_re_d <= {{4{xp_re[15]}}, xp_re[14:0],13'b0};
-        xp_im_d <= {{4{xp_im[15]}}, xp_im[14:0],13'b0};
+        xp_re_d <= {xp_re[15], xp_re, 15'b0};
+        xp_im_d <= {xp_im[15], xp_im, 15'b0};
     end
 end
     //----------------------------------------------------------------------------
