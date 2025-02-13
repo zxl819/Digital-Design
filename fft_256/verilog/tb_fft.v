@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module tb();
     reg clk;
     reg rst_n;
@@ -49,20 +50,20 @@ module tb();
         x_re <= 251;
         x_im <= 251;
 
-        
+
 
         #20
         valid_in <= 1'b0;
 
         // 假设仿真在处理完一些数据后结束
-        #500;
-        $stop;  // 停止仿真，避免无限循环
+        // #500;
+        // $stop;  // 停止仿真，避免无限循环
     end
 
     always #10 clk = ~clk;
 
     integer w_file;
-    initial w_file = $fopen("./fft_256/verilog/fft_output.txt");
+    initial w_file = $fopen("./fft_output.txt");
 
     always @(posedge clk) begin
         if (valid_out) begin

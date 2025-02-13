@@ -1,7 +1,7 @@
-module counter(
+module counter #(parameter CNT_WIDTH = 16)(
     input clk,
     input rst_n,
-    input [8:0] thresh,
+    input [CNT_WIDTH - 1:0] thresh,
     input start,
     input valid,
     output reg not_zero,

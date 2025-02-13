@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module fft_256(
     input clk,
     input rst_n,
@@ -23,8 +24,8 @@ module fft_256(
     //================================================================
     // 2) 缓冲区：用于接收输入数据，并延时后在合适的时刻启动 FFT
     //================================================================
-wire signed [15:0] xm_re_buf [0:N-1];
-wire signed [15:0] xm_im_buf [0:N-1]; //需不需要多一纬度
+reg signed [15:0] xm_re_buf [0:N-1];
+reg signed [15:0] xm_im_buf [0:N-1]; //需不需要多一纬度
 
 integer k;
 always @(posedge clk or negedge rst_n) begin
@@ -50,7 +51,7 @@ end
     wire not_used;
 
     counter #(
-        .CNT_WIDTH (LOGN),
+        .CNT_WIDTH (LOGN)
     ) counter_in(
         .clk(clk),
         .rst_n(rst_n),
@@ -94,10 +95,9 @@ end
     //================================================================
     // 5) 旋转因子 ROM (示例) ：存放 0~127 的 Wn (或 Wn×某个 SCALE)
     //================================================================
-    reg signed [15:0] factor_re [0:N/2-1];
-    reg signed [15:0] factor_im [0:N/2-1];
+    wire signed [15:0] factor_re [0:N/2-1];
+    wire signed [15:0] factor_im [0:N/2-1];
 
-    initial begin
         assign factor_re[0] = 16'h2000;    assign factor_im[0] = 16'h0000;
         assign factor_re[1] = 16'h1FFF;    assign factor_im[1] = 16'hFF37;
         assign factor_re[2] = 16'h1FFE;    assign factor_im[2] = 16'hFE6F;
@@ -162,7 +162,7 @@ end
         assign factor_re[61] = 16'h1F71;   assign factor_im[61] = 16'hD460;
         assign factor_re[62] = 16'h1F6F;   assign factor_im[62] = 16'hD3B3;
         assign factor_re[63] = 16'h1F6D;   assign factor_im[63] = 16'hD307;
-    end
+    
 
     //================================================================
     // 6) 多级蝶形生成
