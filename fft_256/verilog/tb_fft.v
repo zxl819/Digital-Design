@@ -30,34 +30,22 @@ module tb();
 
         #20
         sop_in <= 1'b0;
-        x_re <= 255;
-        x_im <= 255;
+            
+        // 使用循环生成256个数，并按20ns的间隔更新x_re和x_im
+        integer i;
+        for (i = 1; i < 256; i = i + 1) begin
+        #20;
+        x_re <= 256 - i;  // 从 256 开始递减
+        x_im <= 256 - i;  // 同样递减
+        end
 
-        #20
-        sop_in <= 1'b0;
-        x_re <= 254;
-        x_im <= 254;
-
-        #20
-        x_re <= 253;
-        x_im <= 253;
-
-        #20
-        x_re <= 252;
-        x_im <= 252;
-
-        #20
-        x_re <= 251;
-        x_im <= 251;
-
-
-
-        #20
-        valid_in <= 1'b0;
+        #20;
+        valid_in <= 1'b0;  // 停止输入
 
         // 假设仿真在处理完一些数据后结束
-        // #500;
+         #50;
         // $stop;  // 停止仿真，避免无限循环
+        
     end
 
     always #10 clk = ~clk;
@@ -65,11 +53,15 @@ module tb();
     integer w_file;
     initial w_file = $fopen("./fft_output.txt");
 
-    always @(posedge clk) begin
-        if (valid_out) begin
-            $fwrite(w_file, "%d %d\n", y_re, y_im);
-        end
+always @(posedge clk) begin
+    if (valid_out) begin
+        $display("clk: %b, rst_n: %b, valid_in: %b, sop_in: %b, x_re: %d, x_im: %d, valid_out: %b, y_re: %d, y_im: %d", 
+                 clk, rst_n, valid_in, sop_in, x_re, x_im, valid_out, y_re, y_im);
+        $fwrite(w_file, "%d %d\n", y_re, y_im);
+        $finish;  // 当 valid_out 为 1 时结束仿真
     end
+end
+
     fft_256 fft_256_inst(
         .clk(clk),
         .rst_n(rst_n),
