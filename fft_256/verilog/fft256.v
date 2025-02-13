@@ -20,7 +20,7 @@ module fft_256(
     localparam TIME_THRESH_IN = N-2;
     localparam TIME_THRESH_OUT = N;
 
-        //================================================================
+    //================================================================
     // 2) 缓冲区：用于接收输入数据，并延时后在合适的时刻启动 FFT
     //================================================================
 wire signed [15:0] xm_re_buf [0:N-1];
@@ -91,19 +91,82 @@ end
     endgenerate
 
 
-//================================================================
+    //================================================================
     // 5) 旋转因子 ROM (示例) ：存放 0~127 的 Wn (或 Wn×某个 SCALE)
     //================================================================
     reg signed [15:0] factor_re [0:N/2-1];
     reg signed [15:0] factor_im [0:N/2-1];
 
     initial begin
-
+        assign factor_re[0] = 16'h2000;    assign factor_im[0] = 16'h0000;
+        assign factor_re[1] = 16'h1FFF;    assign factor_im[1] = 16'hFF37;
+        assign factor_re[2] = 16'h1FFE;    assign factor_im[2] = 16'hFE6F;
+        assign factor_re[3] = 16'h1FEC;    assign factor_im[3] = 16'hFDA8;
+        assign factor_re[4] = 16'h1FEA;    assign factor_im[4] = 16'hFCE1;
+        assign factor_re[5] = 16'h1FE0;    assign factor_im[5] = 16'hFC1B;
+        assign factor_re[6] = 16'h1FDF;    assign factor_im[6] = 16'hFB54;
+        assign factor_re[7] = 16'h1FDD;    assign factor_im[7] = 16'hFA8F;
+        assign factor_re[8] = 16'h1FDB;    assign factor_im[8] = 16'hF9CA;
+        assign factor_re[9] = 16'h1FD9;    assign factor_im[9] = 16'hF904;
+        assign factor_re[10] = 16'h1FD7;   assign factor_im[10] = 16'hF83F;
+        assign factor_re[11] = 16'h1FD5;   assign factor_im[11] = 16'hF77A;
+        assign factor_re[12] = 16'h1FD3;   assign factor_im[12] = 16'hF6B5;
+        assign factor_re[13] = 16'h1FD1;   assign factor_im[13] = 16'hF5F0;
+        assign factor_re[14] = 16'h1FCF;   assign factor_im[14] = 16'hF52B;
+        assign factor_re[15] = 16'h1FCD;   assign factor_im[15] = 16'hF466;
+        assign factor_re[16] = 16'h1FCB;   assign factor_im[16] = 16'hF3A1;
+        assign factor_re[17] = 16'h1FC9;   assign factor_im[17] = 16'hF37C;
+        assign factor_re[18] = 16'h1FC7;   assign factor_im[18] = 16'hF2B7;
+        assign factor_re[19] = 16'h1FC5;   assign factor_im[19] = 16'hF292;
+        assign factor_re[20] = 16'h1FC3;   assign factor_im[20] = 16'hF1CD;
+        assign factor_re[21] = 16'h1FC1;   assign factor_im[21] = 16'hF108;
+        assign factor_re[22] = 16'h1FBF;   assign factor_im[22] = 16'hF043;
+        assign factor_re[23] = 16'h1FBD;   assign factor_im[23] = 16'hEF7E;
+        assign factor_re[24] = 16'h1FBB;   assign factor_im[24] = 16'hEEB9;
+        assign factor_re[25] = 16'h1FB9;   assign factor_im[25] = 16'hEDF4;
+        assign factor_re[26] = 16'h1FB7;   assign factor_im[26] = 16'hED2F;
+        assign factor_re[27] = 16'h1FB5;   assign factor_im[27] = 16'hEC6A;
+        assign factor_re[28] = 16'h1FB3;   assign factor_im[28] = 16'hEBA5;
+        assign factor_re[29] = 16'h1FB1;   assign factor_im[29] = 16'hEAE0;
+        assign factor_re[30] = 16'h1FAF;   assign factor_im[30] = 16'hEA1B;
+        assign factor_re[31] = 16'h1FAD;   assign factor_im[31] = 16'hE956;
+        assign factor_re[32] = 16'h1FAB;   assign factor_im[32] = 16'hE88F;
+        assign factor_re[33] = 16'h1FA9;   assign factor_im[33] = 16'hE7CA;
+        assign factor_re[34] = 16'h1FA7;   assign factor_im[34] = 16'hE705;
+        assign factor_re[35] = 16'h1FA5;   assign factor_im[35] = 16'hE63F;
+        assign factor_re[36] = 16'h1FA3;   assign factor_im[36] = 16'hE57A;
+        assign factor_re[37] = 16'h1FA1;   assign factor_im[37] = 16'hE4B5;
+        assign factor_re[38] = 16'h1F9F;   assign factor_im[38] = 16'hE3F0;
+        assign factor_re[39] = 16'h1F9D;   assign factor_im[39] = 16'hE32A;
+        assign factor_re[40] = 16'h1F9B;   assign factor_im[40] = 16'hE265;
+        assign factor_re[41] = 16'h1F99;   assign factor_im[41] = 16'hE1A0;
+        assign factor_re[42] = 16'h1F97;   assign factor_im[42] = 16'hE13B;
+        assign factor_re[43] = 16'h1F95;   assign factor_im[43] = 16'hE076;
+        assign factor_re[44] = 16'h1F93;   assign factor_im[44] = 16'hDFB1;
+        assign factor_re[45] = 16'h1F91;   assign factor_im[45] = 16'hDF8C;
+        assign factor_re[46] = 16'h1F8F;   assign factor_im[46] = 16'hDECF;
+        assign factor_re[47] = 16'h1F8D;   assign factor_im[47] = 16'hDE12;
+        assign factor_re[48] = 16'h1F8B;   assign factor_im[48] = 16'hDD55;
+        assign factor_re[49] = 16'h1F89;   assign factor_im[49] = 16'hDCA0;
+        assign factor_re[50] = 16'h1F87;   assign factor_im[50] = 16'hDBEB;
+        assign factor_re[51] = 16'h1F85;   assign factor_im[51] = 16'hDB36;
+        assign factor_re[52] = 16'h1F83;   assign factor_im[52] = 16'hDA81;
+        assign factor_re[53] = 16'h1F81;   assign factor_im[53] = 16'hD9CC;
+        assign factor_re[54] = 16'h1F7F;   assign factor_im[54] = 16'hD918;
+        assign factor_re[55] = 16'h1F7D;   assign factor_im[55] = 16'hD86B;
+        assign factor_re[56] = 16'h1F7B;   assign factor_im[56] = 16'hD7BE;
+        assign factor_re[57] = 16'h1F79;   assign factor_im[57] = 16'hD712;
+        assign factor_re[58] = 16'h1F77;   assign factor_im[58] = 16'hD665;
+        assign factor_re[59] = 16'h1F75;   assign factor_im[59] = 16'hD5B8;
+        assign factor_re[60] = 16'h1F73;   assign factor_im[60] = 16'hD50C;
+        assign factor_re[61] = 16'h1F71;   assign factor_im[61] = 16'hD460;
+        assign factor_re[62] = 16'h1F6F;   assign factor_im[62] = 16'hD3B3;
+        assign factor_re[63] = 16'h1F6D;   assign factor_im[63] = 16'hD307;
     end
 
-//================================================================
-// 6) 多级蝶形生成
-//================================================================
+    //================================================================
+    // 6) 多级蝶形生成
+    //================================================================
     wire [STAGE:0] en_ctrl;  // en_ctrl[0] ~ en_ctrl[8]
     assign en_ctrl[0] = en_stage0;  // 第0级 butterfly 的使能 = 输入缓冲计数到阈值后
 
@@ -198,7 +261,7 @@ end
     assign sop_out = en_ctrl[STAGE];
     assign valid_out = not_zero;
 
-    // 可根据 inv 信号做相应处理，这里仅简单示例
+    // 可根据 inv 信号做相应处理
     reg signed [15:0] y_re_r, y_im_r;
     always @(*) begin
         if(!inv) begin
