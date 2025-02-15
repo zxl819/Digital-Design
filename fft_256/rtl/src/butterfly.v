@@ -14,7 +14,7 @@ module butterfly(
     output signed [15:0] yq_re,
     output signed [15:0] yq_im
 );
-reg [3:0] en_r;
+reg [2:0] en_r;
     //----------------------------------------------------------------------------
     // 1) 使能信号的流水寄存
     //----------------------------------------------------------------------------
@@ -24,7 +24,7 @@ always @(posedge clk or negedge rst_n) begin
         en_r <= 0;
     end
     else begin
-        en_r <= {en_r[2:0], en};
+        en_r <= {en_r[1:0], en};
     end
 end
 assign vld = en_r[2];
@@ -115,5 +115,6 @@ end
     assign yp_im = {yp_im_r[31],yp_im_r[13+15:13]};
     assign yq_re = {yq_re_r[31],yq_re_r[13+15:13]};
     assign yq_im = {yq_im_r[31],yq_im_r[13+15:13]};
+    assign vld = en_r[2];
 
 endmodule

@@ -11,17 +11,18 @@ echo "编译设计文件和 Testbench ..."
 
 # 如果没有外部依赖库，则可以直接指定文件：
 $VCS_HOME/bin/vcs -full64 -sverilog -debug_all \
-   fft_256.v tb_fft.v counter.v butterfly.v -o fft_256_simv
+   fft_256.v tb_fft.v counter.v butterfly.v -o ../sim/fft_256_simv
 
 # 2. 启动仿真
 echo "启动仿真 ..."
-./fft_256_simv +vcs+lic+wait -l simulation.log
+./fft_256_simv  -l ../sim/simulation.log
 
+cd ./wave
 # 3. 在 Verdi 中启动仿真并加载波形
 echo "启动 Verdi ..."
 
 # 假设使用 Verdi 来查看仿真波形
-$VERDI_HOME/bin/verdi -sv -f -ssf verdi_waveform.ssf -l verdi.log
+verdi -sv -f -ssf verdi_waveform.ssf -l verdi.log
 
 # 4. 仿真完成后，检查输出文件
 echo "仿真完成，输出文件："
