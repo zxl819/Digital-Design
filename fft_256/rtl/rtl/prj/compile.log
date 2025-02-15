@@ -1,0 +1,13 @@
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_pp' will be deprecated in a future release.  Please use 
+  '-debug_acc+pp+dmptf -debug_region+cell+encrypt' instead.
+
+Command: vcs -full64 +v2k -debug_pp -f file_list.f -timescale=1ns/1ns -o simv -l \
+compile.log
+
+Error-[P1ARGS-CANTOPN-F] Cannot open file
+  Unable to open 'file_list.f' due to 'No such file or directory'.
+  Please fix the reason mentioned above and continue.
+
+CPU time: .608 seconds to compile

@@ -1,0 +1,330 @@
+#######################################################################################
+# log primitive debug message of FSDB dumping                                         #
+# This is for R&D to analyze when there are issues happening when FSDB dump           #
+#######################################################################################
+ANF: vcsd_get_serial_mode_status('./simv: undefined symbol: vcsd_get_serial_mode_status')
+ANF: vcsd_enable_sva_success_callback('./simv: undefined symbol: vcsd_enable_sva_success_callback')
+ANF: vcsd_disable_sva_success_callback('./simv: undefined symbol: vcsd_disable_sva_success_callback')
+ANF: vcsd_get_power_scope_name('./simv: undefined symbol: vcsd_get_power_scope_name')
+ANF: vcsd_begin_no_value_var_info('./simv: undefined symbol: vcsd_begin_no_value_var_info')
+ANF: vcsd_end_no_value_var_info('./simv: undefined symbol: vcsd_end_no_value_var_info')
+ANF: vcsd_remove_xprop_merge_mode_callback('./simv: undefined symbol: vcsd_remove_xprop_merge_mode_callback')
+ANF: vhpi_get_cb_info('./simv: undefined symbol: vhpi_get_cb_info')
+ANF: vhpi_free_handle('./simv: undefined symbol: vhpi_free_handle')
+ANF: vhpi_fetch_vcsd_handle('./simv: undefined symbol: vhpi_fetch_vcsd_handle')
+ANF: vhpi_fetch_vpi_handle('./simv: undefined symbol: vhpi_fetch_vpi_handle')
+ANF: vhpi_has_verilog_parent('./simv: undefined symbol: vhpi_has_verilog_parent')
+ANF: vhpi_is_verilog_scope('./simv: undefined symbol: vhpi_is_verilog_scope')
+ANF: scsd_xprop_is_enabled('./simv: undefined symbol: scsd_xprop_is_enabled')
+ANF: scsd_xprop_sig_is_promoted('./simv: undefined symbol: scsd_xprop_sig_is_promoted')
+ANF: scsd_xprop_int_xvalue('./simv: undefined symbol: scsd_xprop_int_xvalue')
+ANF: scsd_xprop_bool_xvalue('./simv: undefined symbol: scsd_xprop_bool_xvalue')
+ANF: scsd_xprop_enum_xvalue('./simv: undefined symbol: scsd_xprop_enum_xvalue')
+ANF: scsd_xprop_register_merge_mode_cb('./simv: undefined symbol: scsd_xprop_register_merge_mode_cb')
+ANF: scsd_xprop_delete_merge_mode_cb('./simv: undefined symbol: scsd_xprop_delete_merge_mode_cb')
+ANF: scsd_xprop_get_merge_mode('./simv: undefined symbol: scsd_xprop_get_merge_mode')
+ANF: scsd_thread_get_info('./simv: undefined symbol: scsd_thread_get_info')
+ANF: scsd_thread_vc_init('./simv: undefined symbol: scsd_thread_vc_init')
+ANF: scsd_master_set_delta_sync_cbk('./simv: undefined symbol: scsd_master_set_delta_sync_cbk')
+ANF: scsd_fgp_get_fsdb_cores('./simv: undefined symbol: scsd_fgp_get_fsdb_cores')
+ANF: scsd_fgp_get_is_cpu_affinity_disabled('./simv: undefined symbol: scsd_fgp_get_is_cpu_affinity_disabled')
+ANF: vhdi_dt_get_type('./simv: undefined symbol: vhdi_dt_get_type')
+ANF: vhdi_dt_get_key('./simv: undefined symbol: vhdi_dt_get_key')
+ANF: vhdi_dt_get_vhdl_enum_info('./simv: undefined symbol: vhdi_dt_get_vhdl_enum_info')
+ANF: vhdi_dt_get_vhdl_physical_info('./simv: undefined symbol: vhdi_dt_get_vhdl_physical_info')
+ANF: vhdi_dt_get_vhdl_array_info('./simv: undefined symbol: vhdi_dt_get_vhdl_array_info')
+ANF: vhdi_dt_get_vhdl_record_info('./simv: undefined symbol: vhdi_dt_get_vhdl_record_info')
+ANF: vhdi_def_traverse_module('./simv: undefined symbol: vhdi_def_traverse_module')
+ANF: vhdi_def_traverse_scope('./simv: undefined symbol: vhdi_def_traverse_scope')
+ANF: vhdi_def_traverse_variable('./simv: undefined symbol: vhdi_def_traverse_variable')
+ANF: vhdi_def_get_module_id_by_vhpi('./simv: undefined symbol: vhdi_def_get_module_id_by_vhpi')
+ANF: vhdi_def_get_handle_by_module_id('./simv: undefined symbol: vhdi_def_get_handle_by_module_id')
+ANF: vhdi_def_get_variable_info_by_vhpi('./simv: undefined symbol: vhdi_def_get_variable_info_by_vhpi')
+ANF: vhdi_def_free('./simv: undefined symbol: vhdi_def_free')
+ANF: vhdi_ist_traverse_scope('./simv: undefined symbol: vhdi_ist_traverse_scope')
+ANF: vhdi_ist_traverse_variable('./simv: undefined symbol: vhdi_ist_traverse_variable')
+ANF: vhdi_ist_convert_by_vhpi('./simv: undefined symbol: vhdi_ist_convert_by_vhpi')
+ANF: vhdi_ist_clone('./simv: undefined symbol: vhdi_ist_clone')
+ANF: vhdi_ist_free('./simv: undefined symbol: vhdi_ist_free')
+ANF: vhdi_ist_hash_key('./simv: undefined symbol: vhdi_ist_hash_key')
+ANF: vhdi_ist_compare('./simv: undefined symbol: vhdi_ist_compare')
+ANF: vhdi_ist_get_value_addr('./simv: undefined symbol: vhdi_ist_get_value_addr')
+ANF: vhdi_set_scsd_callback('./simv: undefined symbol: vhdi_set_scsd_callback')
+ANF: vhdi_cbk_set_force_callback('./simv: undefined symbol: vhdi_cbk_set_force_callback')
+ANF: vhdi_trigger_init_force('./simv: undefined symbol: vhdi_trigger_init_force')
+ANF: vhdi_ist_check_scsd_callback('./simv: undefined symbol: vhdi_ist_check_scsd_callback')
+ANF: vhdi_ist_add_scsd_callback('./simv: undefined symbol: vhdi_ist_add_scsd_callback')
+ANF: vhdi_ist_remove_scsd_callback('./simv: undefined symbol: vhdi_ist_remove_scsd_callback')
+ANF: vhdi_ist_get_scsd_user_data('./simv: undefined symbol: vhdi_ist_get_scsd_user_data')
+ANF: vhdi_add_time_change_callback('./simv: undefined symbol: vhdi_add_time_change_callback')
+ANF: vhdi_get_real_value_by_value_addr('./simv: undefined symbol: vhdi_get_real_value_by_value_addr')
+ANF: vhdi_get_64_value_by_value_addr('./simv: undefined symbol: vhdi_get_64_value_by_value_addr')
+ANF: vhdi_xprop_inst_is_promoted('./simv: undefined symbol: vhdi_xprop_inst_is_promoted')
+ANF: vdi_ist_convert_by_vhdi('./simv: undefined symbol: vdi_ist_convert_by_vhdi')
+ANF: vhdi_ist_get_module_id('./simv: undefined symbol: vhdi_ist_get_module_id')
+ANF: vhdi_refine_foreign_scope_type('./simv: undefined symbol: vhdi_refine_foreign_scope_type')
+ANF: vhdi_flush_callback('./simv: undefined symbol: vhdi_flush_callback')
+ANF: vhdi_set_orig_name('./simv: undefined symbol: vhdi_set_orig_name')
+ANF: vhdi_set_dump_pt('./simv: undefined symbol: vhdi_set_dump_pt')
+ANF: vhdi_get_fsdb_option('./simv: undefined symbol: vhdi_get_fsdb_option')
+ANF: vhdi_fgp_get_mode('./simv: undefined symbol: vhdi_fgp_get_mode')
+ANF: vhdi_node_register_composite_var('./simv: undefined symbol: vhdi_node_register_composite_var')
+ANF: vhdi_node_analysis('./simv: undefined symbol: vhdi_node_analysis')
+ANF: vhdi_node_id('./simv: undefined symbol: vhdi_node_id')
+ANF: vhdi_node_ist_check_scsd_callback('./simv: undefined symbol: vhdi_node_ist_check_scsd_callback')
+ANF: vhdi_node_ist_add_scsd_callback('./simv: undefined symbol: vhdi_node_ist_add_scsd_callback')
+ANF: vhdi_node_ist_get_value_addr('./simv: undefined symbol: vhdi_node_ist_get_value_addr')
+ANF: vhdi_enc_def_traverse_module('./simv: undefined symbol: vhdi_enc_def_traverse_module')
+ANF: vhdi_enc_def_traverse_scope('./simv: undefined symbol: vhdi_enc_def_traverse_scope')
+ANF: vhdi_enc_def_traverse_variable('./simv: undefined symbol: vhdi_enc_def_traverse_variable')
+ANF: vhdi_enc_ist_traverse_scope('./simv: undefined symbol: vhdi_enc_ist_traverse_scope')
+ANF: vhdi_enc_ist_traverse_variable('./simv: undefined symbol: vhdi_enc_ist_traverse_variable')
+ANF: vhdi_enc_ist_get_module_id('./simv: undefined symbol: vhdi_enc_ist_get_module_id')
+ANF: vhdi_enc_def_get_handle_by_module_id('./simv: undefined symbol: vhdi_enc_def_get_handle_by_module_id')
+VCS compile option:
+ option[0]: ./simv
+ option[1]: -l
+ option[2]: sim.log
+ option[3]: /usr/Synopsys/vcs/T-2022.06/linux64/bin/vcs1
+ option[4]: -Mcc=gcc
+ option[5]: -Mcplusplus=g++
+ option[6]: -Masflags=
+ option[7]: -Mcfl= -pipe -fPIC -O -I/usr/Synopsys/vcs/T-2022.06/include 
+ option[8]: -Mxllcflags=
+ option[9]: -Mxcflags= -pipe -fPIC -I/usr/Synopsys/vcs/T-2022.06/include
+ option[10]: -Mldflags= -rdynamic 
+ option[11]: -Mout=simv
+ option[12]: -Mamsrun=
+ option[13]: -Mvcsaceobjs=
+ option[14]: -Mobjects= /usr/Synopsys/vcs/T-2022.06/linux64/lib/libvirsim.so /usr/Synopsys/vcs/T-2022.06/linux64/lib/liberrorinf.so /usr/Synopsys/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so /usr/Synopsys/vcs/T-2022.06/linux64/lib/libvfs.so 
+ option[15]: -Mexternalobj=
+ option[16]: -Msaverestoreobj=/usr/Synopsys/vcs/T-2022.06/linux64/lib/vcs_save_restore_new.o
+ option[17]: -Mcrt0=
+ option[18]: -Mcrtn=
+ option[19]: -Mcsrc=
+ option[20]: -Msyslibs=/usr/Synopsys/verdi/T-2022.06/share/PLI/VCS/LINUX64/pli.a -ldl 
+ option[21]: -l
+ option[22]: compile.log
+ option[23]: -full64
+ option[24]: -debug_acc+all
+ option[25]: +vpi
+ option[26]: +vcsd1
+ option[27]: +itf+/usr/Synopsys/vcs/T-2022.06/linux64/lib/vcsdp_lite.tab
+ option[28]: -o
+ option[29]: simv
+ option[30]: -picarchive
+ option[31]: -P
+ option[32]: /usr/Synopsys/verdi/T-2022.06/share/PLI/VCS/LINUX64/verdi.tab
+ option[33]: -fsdb
+ option[34]: -sverilog
+ option[35]: -gen_obj
+ option[36]: -f
+ option[37]: file_list.f
+ option[38]: -load
+ option[39]: /usr/Synopsys/verdi/T-2022.06/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
+Chronologic Simulation VCS Release T-2022.06_Full64
+Linux 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024 x86_64
+CPU cores: 16
+Limit information:
+======================================
+cputime		unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8193 kbytes
+coredumpsize		0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		4096
+memorylocked		64 kbytes
+maxproc		4096
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+XDG_VTNR=1
+INN_HOME=/usr/Cadence/INNOVUS201
+XDG_SESSION_ID=1
+SSH_AGENT_PID=3227
+DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-TIGcp7EDme,guid=92d77d5d78662c7b9f23022a67b08ae4
+HOSTNAME=eda
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+MGC_FDI_OA_VERSION=22.60
+TERM=xterm-256color
+XDG_MENU_PREFIX=gnome-
+VTE_VERSION=5204
+SHELL=/bin/bash
+HISTSIZE=1000
+MAKEFLAGS=
+redhawk_HOME=/usr/Ansys/redhawk/RedHawk_Linux64e6_V2020R2.1
+DESIGNWARE_HOME=/home/autumn/Desktop/IP
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/0886e53a_bb59_4634_8989_cb382ddc589b
+CDS_LOAD_ENV=CSF
+QTDIR=/usr/lib64/qt-3.3
+OLDPWD=/home/host/Documents/last/fft_256/rtl/prj
+QTINC=/usr/lib64/qt-3.3/include
+NOVAS=/usr/Synopsys/verdi/T-2022.06/share/PLI/VCS/LINUX64
+IMSETTINGS_MODULE=none
+QT_GRAPHICSSYSTEM_CHECKED=1
+USER=host
+LD_LIBRARY_PATH=/usr/Synopsys/verdi/T-2022.06/share/PLI/VCS/LINUX64:/usr/Cadence/IC618/tools.lnx86/lib/64bit
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+GNOME_TERMINAL_SERVICE=:1.103
+CONFRML_HOME=/usr/Cadence/CONFRML222
+SSH_AUTH_SOCK=/run/user/1001/keyring/ssh
+novas_args=-P ${NOVAS}/novas.tab ${NOVAS}/pli.a
+MAKELEVEL=1
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3081,unix/unix:/tmp/.ICE-unix/3081
+APACHEDA_LICENSE_FILE=/usr/Ansys/license/apacheda.lic
+USERNAME=host
+SNPSLMD_LICENSE_FILE=27000@localhost.localdomain
+MFLAGS=
+Virtuoso_HOME=/usr/Cadence/IC618
+VC_STATIC_HOME=/usr/Synopsys/vc_static/T-2022.06-SP2
+GNOME_SHELL_SESSION_MODE=classic
+STARRC_HOME=/usr/Synopsys/starrc/T-2022.03-SP2
+MAIL=/var/spool/mail/host
+PATH=/usr/Ansys/redhawk/RedHawk_Linux64e6_V2020R2.1/bin:/usr/Mentor/tessent/bin:/usr/Mentor/calibre/aoi_cal_2022.4_28.13/bin:/usr/Cadence/IC618/tools/plot/bin:/usr/Cadence/IC618/tools/iccraft/bin:/usr/Cadence/IC618/tools/dracula/bin:/usr/Cadence/IC618/tools/dfII/bin:/usr/Cadence/IC618/tools/bin:/usr/Cadence/IC618/share/bin:/usr/Synopsys/coretools/T-2022.06/bin:/usr/Ansys/redhawk/RedHawk_Linux64e6_V2020R2.1/bin:/usr/Mentor/tessent/bin:/usr/Mentor/calibre/aoi_cal_2022.4_28.13/bin:/usr/Cadence/IC618/tools/plot/bin:/usr/Cadence/IC618/tools/iccraft/bin:/usr/Cadence/IC618/tools/dracula/bin:/usr/Cadence/IC618/tools/dfII/bin:/usr/Cadence/IC618/tools/bin:/usr/Cadence/IC618/share/bin:/usr/Synopsys/coretools/T-2022.06/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/Synopsys/vcs/T-2022.06/bin:/usr/Synopsys/verdi/T-2022.06/bin:/usr/Synopsys/scl/2021.03/linux64/bin:/usr/Synopsys/syn/T-2022.03-SP2/bin:/usr/Synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/bin:/usr/Synopsys/fm/T-2022.03/bin:/usr/Synopsys/prime/T-2022.03/bin:/usr/Synopsys/icc2/T-2022.03/bin:/usr/Synopsys/icc/T-2022.03/bin:/usr/Synopsys/testmax/S-2021.06-SP5/bin:/usr/Synopsys/txs/R-2020.09-SP3/bin:/usr/Synopsys/starrc/T-2022.03-SP2/bin:/usr/Synopsys/lc/T-2022.03/bin:/usr/Synopsys/vc_static/T-2022.06-SP2/bin:/usr/Cadence/INNOVUS201/bin:/usr/Cadence/CONFRML222/bin:/home/host/.local/bin:/home/host/bin:/usr/Synopsys/vcs/T-2022.06/bin:/usr/Synopsys/verdi/T-2022.06/bin:/usr/Synopsys/scl/2021.03/linux64/bin:/usr/Synopsys/syn/T-2022.03-SP2/bin:/usr/Synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/bin:/usr/Synopsys/fm/T-2022.03/bin:/usr/Synopsys/prime/T-2022.03/bin:/usr/Synopsys/icc2/T-2022.03/bin:/usr/Synopsys/icc/T-2022.03/bin:/usr/Synopsys/testmax/S-2021.06-SP5/bin:/usr/Synopsys/txs/R-2020.09-SP3/bin:/usr/Synopsys/starrc/T-2022.03-SP2/bin:/usr/Synopsys/lc/T-2022.03/bin:/usr/Synopsys/vc_static/T-2022.06-SP2/bin:/usr/Cadence/INNOVUS201/bin:/usr/Cadence/CONFRML222/bin
+DESKTOP_SESSION=gnome-classic
+PT_HOME=/usr/Synopsys/prime/T-2022.03
+QT_IM_MODULE=ibus
+VERDI_HOME=/usr/Synopsys/verdi/T-2022.06
+CALIBRE_HOME=/usr/Mentor/calibre/aoi_cal_2022.4_28.13
+PWD=/home/host/Documents/last/fft_256/rtl/vcs
+XDG_SESSION_TYPE=x11
+VCS_HOME=/usr/Synopsys/vcs/T-2022.06
+XMODIFIERS=@im=ibus
+TXS_HOME=/usr/Synopsys/txs/R-2020.09-SP3
+FM_HOME=/usr/Synopsys/fm/T-2022.03
+LANG=en_US.UTF-8
+TESTMAX_MAX=/usr/Synopsys/testmax/S-2021.06-SP5
+GDM_LANG=en_US.UTF-8
+VCS_ARCH_OVERRIDE=linux
+OA_HOME=/usr/Cadence/IC618/oa_v22.60.007
+ICC_HOME=/usr/Synopsys/icc/T-2022.03
+TESSENT_HOME=/usr/Mentor/tessent
+CDS_Netlisting_Mode=Analog
+GDMSESSION=gnome-classic
+HISTCONTROL=ignoredups
+DBUS_STARTER_BUS_TYPE=session
+SHLVL=3
+XDG_SEAT=seat0
+HOME=/home/host
+ICC2_HOME=/usr/Synopsys/icc2/T-2022.03
+MGC_HOME=/usr/Mentor/calibre/aoi_cal_2022.4_28.13
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+CDS_AUTO_64BIT=ALL
+MGC_LIB_PATH=/usr/Mentor/calibre/aoi_cal_2022.4_28.13/lib
+DC_HOME=/usr/Synopsys/syn/T-2022.03-SP2
+LOGNAME=host
+XDG_SESSION_DESKTOP=gnome-classic
+SPYGLASS_HOME=/usr/Synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME
+QTLIB=/usr/lib64/qt-3.3/lib
+MGLS_LICENSE_FILE=/usr/Mentor/license/license.dat
+OA_PLUGIN_PATH=/usr/Cadence/IC618/oa_v22.60.007/data/plugins
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-TIGcp7EDme,guid=92d77d5d78662c7b9f23022a67b08ae4
+XDG_DATA_DIRS=/home/host/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
+CDS_LIC_FILE=/usr/Cadence/license/cadence.dat
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+SCL_HOME=/usr/Synopsys/scl/2021.03
+WINDOWPATH=1
+DISPLAY=:0
+XDG_RUNTIME_DIR=/run/user/1001
+LC_HOME=/usr/Synopsys/lc/T-2022.03
+SPYGLASS_DC_PATH=/usr/Synopsys/syn/T-2022.03-SP2
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+COLORTERM=truecolor
+XAUTHORITY=/run/gdm/auth-for-host-qBdoGV/database
+_=./simv
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_STACK_EXEC=true
+VCS_EXEC_DONE=1
+LC_ALL=C
+DVE=/usr/Synopsys/vcs/T-2022.06/gui/dve
+SPECMAN_OUTPUT_TO_TTY=1
+FLEXLM_BORROWFILE=/home/host/.eda-borrow.txt
+Runtime command line arguments:
+argv[0]=./simv
+argv[1]=-l
+argv[2]=sim.log
+248 profile - 100
+          CPU/Mem usage: 0.350 sys,  1.120 user,  427.61M mem
+249 Elapsed time:    0:00:06    Sat Feb 15 22:48:05 2025
+250 User CPU time used: 1 seconds
+251 System CPU time used: 0 seconds
+252 pliAppInit
+253 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+254 FSDB_GATE is set.
+255 FSDB_RTL is set.
+256 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
+257 Enable Parallel Dumping.
+258 pliAppMiscSet: New Sim Round
+259 pliEntryInit
+260 LIBSSCORE=found /usr/Synopsys/verdi/T-2022.06/share/PLI/lib/LINUXAMD64/libsscore_vcs202206.so through $NOVAS_HOME setting.
+261 FSDB Dumper for VCS, Release Verdi_T-2022.06, Linux x86_64/64bit, 05/29/2022
+262 (C) 1996 - 2022 by Synopsys, Inc.
+263 sps_call_fsdbDumpfile_main at 0 : ../tb/tb_ifft.v(137)
+264 argv[0]: (ifft_waveform.fsdb)
+265 *Verdi* : Create FSDB file 'ifft_waveform.fsdb'
+266 [spi_vcs_vd_ppi_create_root]: no upf option
+267 compile option from '/home/host/Documents/last/fft_256/rtl/vcs/simv.daidir/vcs_rebuild'.
+268   "vcs '-full64' '-sverilog' '-debug_acc+all' '-f' 'file_list.f' '-o' 'simv' '-l' 'compile.log' 2>&1"
+269 DVDI_is_vir_unload_enabled is enable
+270 FSDB_VCS_ENABLE_NATIVE_VC is enable
+271 sps_call_fsdbDumpvars_vd_main at 0 : ../tb/tb_ifft.v(139)
+272 argv[0]: (+all)
+273 *Verdi* : Begin traversing the scopes, layer (0).
+274 *Verdi* : Enable +all dumping.
+275 *Verdi* : End of traversing.
+276 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 1.350 sys,  1.970 user,  546.78M mem
+                   incr: 0.300 sys,  0.790 user,  27.50M mem
+                   accu: 0.300 sys,  0.790 user,  27.50M mem
+              accu incr: 0.300 sys,  0.790 user,  27.50M mem
+
+          Count usage: 35890 var,  31795 idcode,  21805 callback
+                 incr: 35890 var,  31795 idcode,  21805 callback
+                 accu: 35890 var,  31795 idcode,  21805 callback
+            accu incr: 35890 var,  31795 idcode,  21805 callback
+277 Elapsed time:    0:00:08    Sat Feb 15 22:48:07 2025
+278 User CPU time used: 1 seconds
+279 System CPU time used: 1 seconds
+280 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 1.350 sys,  1.990 user,  548.59M mem
+                   incr: 0.000 sys,  0.020 user,  1.81M mem
+                   accu: 0.300 sys,  0.810 user,  29.32M mem
+              accu incr: 0.000 sys,  0.020 user,  1.81M mem
+
+          Count usage: 35890 var,  31795 idcode,  21805 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 35890 var,  31795 idcode,  21805 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+281 Elapsed time:    0:00:08    Sat Feb 15 22:48:07 2025
+282 User CPU time used: 1 seconds
+283 System CPU time used: 1 seconds
+284 End of simulation at 10170
+285 Memory usage: 556.990 M
+286 Maximum resident set size: 177 MB
+287 Hard page faults: 0
+288 Soft page faults: 30692
+289 Elapsed time:    0:00:47    Sat Feb 15 22:48:46 2025
+290 User CPU time used: 41 seconds
+291 System CPU time used: 1 seconds
+292 Begin FSDB profile info:
+293 FSDB Writer : bc1(1104) bcn(1377634) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.350366) io wait(0.000000) theadpool wait(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+294 End FSDB profile info
+295 FSDB closed. Name: ifft_waveform.fsdb Size: 353621
+296 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+297                      - BlockUsed:10 Acquire:1352070 BufferUsed:16914148
+298                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:8
+299                      - MainProducerTime:42.551891158 TotalConsumerTime:0.463575854
+300                      - ElapsedTime:41.538796000
+301 Producer   0 profile - BlockUsed:10 Acquire:1352070 BufferUsed:16914148
+302 Consumer   0 profile - Affinity:-1 CPUTime:0.463575854 LifeTime:36.400859508 (0.01%)
+303                      - BlockUsed:10 Acquire:1352070 BufferUsed:16914148
+304 SimExit
+305 Elapsed time:    0:00:48    Sat Feb 15 22:48:47 2025
+306 User CPU time used: 41 seconds
+307 System CPU time used: 1 seconds
+308 Sim process exit
