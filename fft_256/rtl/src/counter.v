@@ -6,7 +6,7 @@ module counter (
 
     input rst_n,
 
-    input [8:0] thresh,
+    input [31:0] thresh,
 
     input start,
 
@@ -20,7 +20,7 @@ module counter (
 
     
 
-    reg [8:0] cnt;
+    reg [31:0] cnt;
 
     reg cur_state, nxt_state;
 

@@ -1,6 +1,0 @@
-Warning: Design 'fft_256_2' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Error: Could not read the following target libraries:
-your_library.db 
- (UIO-3)
-#line 521

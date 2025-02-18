@@ -1,5 +1,5 @@
 `timescale 1ns/1ns
-module fft_256 (
+module fft_256_2 (
     input clk,
     input rst_n,
     input inv,

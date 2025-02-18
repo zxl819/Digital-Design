@@ -1,7 +1,7 @@
 % 读取文件
 Verilog_FFT = zeros(256,2);
-Matlab_FFT = load('fft_output');
-Verilog_FFT = load('../rtl/rtl/vcs/fft_output.txt');
+Matlab_FFT = load('ifft_output');
+Verilog_FFT = load('../rtl/vcs/ifft_output.txt');
 
 Verilog_FFT_data = Verilog_FFT(:,1) + Verilog_FFT(:,2)*1i;
 
@@ -14,11 +14,12 @@ figure(1);
 plot(1:256, abs(Verilog_FFT_data), '-'); % 绘制 MATLAB fft 的结果，蓝色线条
 hold on; % 保持当前图形窗口
 plot(1:N, abs(xm{m+1}), '--'); % 绘制自定义 FFT 的结果，红色线条
+plot(1:N,abs(ifft2),'-.')
 hold off; % 关闭图形保持
-title('VCS sim FFT vs Custom FFT'); % 添加标题
+title('VCS sim IFFT vs Custom IFFT vs Matlab'); % 添加标题
 xlabel('Frequency Bin'); % x 轴标签
 ylabel('Magnitude'); % y 轴标签
-legend('Vcs sim FFT', 'Custom FFT'); % 添加图例
+legend('Vcs sim IFFT', 'Custom IFFT'," Matlab IFFT"); % 添加图例
 grid on; % 添加网格
 
 

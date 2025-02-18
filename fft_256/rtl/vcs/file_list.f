@@ -8,4 +8,4 @@
 
 
 // Testbench
-../tb/tb_fft.v
+../tb/tb_ifft.v

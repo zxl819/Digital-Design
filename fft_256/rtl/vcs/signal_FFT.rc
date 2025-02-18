@@ -1,0 +1,78 @@
+Magic 271485
+Revision Verdi_T-2022.06
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1204 314 100 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/host/Documents/last/fft_256/rtl/vcs/fft_waveform.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 5572.170000
+cursor 0.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 2
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/host/Documents/last/fft_256/rtl/vcs/fft_waveform.fsdb"
+addSignal -h 15 /tb/clk
+addSignal -h 15 -holdScope inv
+addSignal -h 15 -holdScope rst_n
+addSignal -h 15 -holdScope sop_in
+addSignal -h 15 -holdScope sop_out
+addSignal -h 15 -holdScope valid_in
+addSignal -h 15 -holdScope valid_out
+addSignal -h 15 -UNSIGNED -HEX -holdScope x_im[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope x_re[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope y_im[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope y_re[15:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/host/Documents/last/fft_256/rtl/vcs/fft_waveform.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/tb"
+
+SCOPE_LIST_BEGIN
+"/tb"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

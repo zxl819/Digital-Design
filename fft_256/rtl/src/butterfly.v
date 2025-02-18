@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module butterfly(
     input clk, 
     input rst_n,

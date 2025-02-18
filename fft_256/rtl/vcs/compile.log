@@ -1,0 +1,50 @@
+Command: vcs -full64 -sverilog -debug_acc+all -f file_list.f -o simv -l compile.log \
+
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Tue Feb 18 14:20:36 2025
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '../src/butterfly.v'
+Parsing design file '../src/counter.v'
+Parsing design file '../src/fft256.v'
+Parsing design file '../tb/tb_ifft.v'
+Top Level Modules:
+       tb
+TimeScale is 1 ns / 1 ns
+Starting vcs inline pass...
+
+3 modules and 0 UDP read.
+recompiling module tb
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory `/home/host/Documents/last/fft_256/rtl/vcs/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic   -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/Synopsys/vcs/T-2022.06/linux64/lib -L/usr/Synopsys/vcs/T-2022.06/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _63518_archive_1.so _prev_archive_1.so \
+_cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile \
+-luclinative /usr/Synopsys/vcs/T-2022.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/Synopsys/vcs/T-2022.06/linux64/lib/vcs_save_restore_new.o \
+/usr/Synopsys/verdi/T-2022.06/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread \
+-ldl 
+../simv up to date
+make[1]: Leaving directory `/home/host/Documents/last/fft_256/rtl/vcs/csrc'
+CPU time: 20.712 seconds to compile + 2.296 seconds to elab + 1.571 seconds to link
