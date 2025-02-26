@@ -1,51 +1,31 @@
-/*                                                                      
-
-*/
 `timescale 1ns/1ns
-`include "instruction_decoder.v"
+`include "Re_instruction_decoder.v"
 
 module instdecoder_tb();
     reg [31:0] instruction_code;
     reg en;
     wire invalid_instruction;
-    wire [18:0] alu_op;
-    wire  [8:0] jmp_op;
-    wire [8:0] mem_op;
-    wire cust_op;
-    wire [5:0] csr_op;
-    wire [7:0] mechie_op;
     wire [4:0] rd; 
     wire [4:0] rs1; 
     wire [4:0] rs2;
-    wire [6:0] imm_2531;
-    wire [19:0] imm_1231;
-    wire [11:0] imm_2032;
+    wire [47:0] inst_flags;
 
-    instruction_decode dut(
+
+    instruction_decoder dut(
         .instruction_code(instruction_code),
         .en(en),
         .invalid_instruction(invalid_instruction),
-        .alu_op(alu_op),
-        .jmp_op(jmp_op),
-        .mem_op(mem_op),
-        .cust_op(cust_op),
-        .csr_op(csr_op),
-        .mechie_op(mechie_op),
         .rd(rd),
         .rs1(rs1),
         .rs2(rs2),
-        .imm_2531(imm_2531),
-        .imm_1231(imm_1231),
-        .imm_2032(imm_2032)
+        .inst_flags(inst_flags)
+
     );
 
-
-`ifdef FSDB
-initial begin
-    $fsdbDumpfile("tb_instru.fsdb");
-    $fsdbDumpvars;
-end
-`endif
+    initial begin
+        $dumpfile("instdecoder.vcd");
+        $dumpvars(0, instdecoder_tb);
+    end
 
     initial begin
         en = 1;
